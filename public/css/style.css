@@ -1,0 +1,251 @@
+body {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #333333;
+}
+
+main {
+    width: auto;
+    height: 100%;
+}
+.main-letter {
+    /* position: absolute;
+    top: -120px;
+    left: 35%; */
+    font-size: 35px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: deeppink;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+
+}
+.main-slotcount {
+    font-size: 30px;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #89ce94;
+    border: 2px solid #333333;
+    border-radius: 20px;
+    width: 50%;
+    margin: 10% auto;
+    padding: 5px 15px;
+}
+.main-movie {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    /* height: 100vh; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.main-movie > video{
+    width: 375px;
+    transform: scale(1);
+}
+.main-display {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30%;
+
+}
+.main-display-icon {
+    width: 33%;
+}
+.main-display-icon > img {
+    width: 95%;
+}
+.main-button {
+    width: 100%;
+    margin: 10% auto;
+}
+
+.button-start {
+    background-color: #86a59c;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: azure;
+    border-radius: 50%;
+    margin-top: 50px;
+    text-shadow: 0px 100px 100px #e2041b;
+    cursor: pointer;
+}
+.button-start:hover {
+    background-color: #455f56;
+}
+
+.button-push {
+    color: azure;
+    background-color: #7d5ba6;
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: azure;
+    border-radius: 50%;
+    text-shadow: 0px 100px 100px #e2041b;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.button-push:hover {
+    background: #594077;
+}
+
+/* 表記させる */
+.show {
+    opacity: 1;
+}
+
+/* 非表示にさせる */
+.hide {
+    opacity: 0;
+}
+.hide-button {
+    display: none;
+}
+
+/* 完全消去 */
+.out {
+    display: none;
+}
+
+video {
+    width: 1000px;
+    height: 800px;
+}
+
+.hide-move {
+    animation-name: hide-move__frame;
+    animation-duration: 2s;
+}
+
+@keyframes hide-move__frame {
+    0% {
+        transform: none;
+    }
+    50% {
+        opacity: 0.8;
+        transform: rotate(360deg);
+    }
+    70% {
+        opacity: 0.5;
+        transform: rotate(360deg);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.show-move {
+    animation-name: show-move__frame;
+    animation-duration: 2s;
+}
+
+@keyframes show-move__frame {
+    0% {
+        transform: none;
+    }
+    50% {
+        opacity: 0.1;
+        transform: rotate(360deg);
+    }
+    70% {
+        opacity: 0.4;
+        transform: rotate(360deg);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hide-move-button {
+    animation-name: hide-move-button__frame;
+    animation-duration: 0.5s;
+}
+
+@keyframes hide-move-button__frame {
+    0% {
+        transform: none;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    70% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.show-move-button {
+    animation-name: show-move-button__frame;
+    animation-duration: 2s;
+}
+
+@keyframes show-move-button__frame {
+    0% {
+        transform: none;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    70% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    .main-slotcount{
+        margin: 5px auto;
+    }
+    .main-display{
+        margin-top: 5px;
+    }
+    .main-button{
+        max-width: 5px auto;
+    }
+    .button-start {
+        margin-top: 0;
+        padding: 0;
+    }
+    .main-movie>video{
+        transform: scale(1);
+    }
+    .main-display-icon>img {
+        width: 75%;
+    }
+    .main-letter {
+        font-size: 50px;
+    }
+}
